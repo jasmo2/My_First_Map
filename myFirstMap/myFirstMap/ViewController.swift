@@ -12,6 +12,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     // voice bunny location
     // 4.666612, -74.053463
 
+    @IBOutlet var myFirstMap: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +31,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         
-        
+        myFirstMap.setRegion(region, animated: true)
         
     }
 
